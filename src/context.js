@@ -48,6 +48,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     dispatch({ type: "GET_TOTAL" });
+    // dispatch({type: "RANDOM"}) -Uncomment this to see the error handling from the reducer file
   }, [state.cart]);
 
   return (
