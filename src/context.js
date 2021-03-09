@@ -32,8 +32,8 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    console.log("Test");
-  }, [state.cart])
+    dispatch({ type: "GET_TOTAL" });
+  }, [state.cart]);
 
   return (
     <AppContext.Provider
@@ -42,7 +42,7 @@ const AppProvider = ({ children }) => {
         clearCart,
         remove,
         increase,
-        decrease
+        decrease,
       }}
     >
       {children}
